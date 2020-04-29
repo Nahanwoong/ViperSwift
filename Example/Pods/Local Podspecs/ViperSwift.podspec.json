@@ -1,0 +1,29 @@
+{
+  "name": "ViperSwift",
+  "version": "1.0.0",
+  "summary": "This is ViperSwift",
+  "description": "This is VIPER architecture Protocol",
+  "homepage": "https://github.com/Nahanwoong/ViperSwift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "nahanwoong": "nibdevn@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Nahanwoong/ViperSwift.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source_files": "ViperSwift/Viper/**/*.swift",
+  "ios": {
+    "dependencies": {
+      "SVProgressHUD": [
+
+      ]
+    }
+  }
+}

@@ -17,12 +17,12 @@ ViperSwift is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ViperSwift'
+pod 'ViperSwift' 
 ```
 
 ## Author
 
-nibdevn@gmail.com, nibdevn@gmail.com
+nibdevn@gmail.com
 
 ## License
 

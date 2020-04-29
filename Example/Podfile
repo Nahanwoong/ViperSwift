@@ -2,10 +2,4 @@ use_frameworks!
 
 target 'ViperSwift_Example' do
   pod 'ViperSwift', :path => '../'
-
-  target 'ViperSwift_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end

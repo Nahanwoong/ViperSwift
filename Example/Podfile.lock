@@ -1,0 +1,23 @@
+PODS:
+  - SVProgressHUD (2.2.5)
+  - ViperSwift (1.0.0):
+    - SVProgressHUD
+
+DEPENDENCIES:
+  - ViperSwift (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - SVProgressHUD
+
+EXTERNAL SOURCES:
+  ViperSwift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  ViperSwift: c5b44b327752ef93208a66264c14fce1bc00dbd7
+
+PODFILE CHECKSUM: 2c5819448d8d3437ef3de5b3d690b39f54f46c47
+
+COCOAPODS: 1.8.4
