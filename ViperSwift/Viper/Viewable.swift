@@ -3,8 +3,8 @@ import SVProgressHUD
 
 public protocol Viewable {
     
-    associatedtype P:Presenterable
-    var presenter:P! { get }
+    associatedtype PresenterType:Presenterable
+    var presenter: PresenterType! { get }
     
     func setTitle(title: String)
     func showLoading(_ text: String?)
