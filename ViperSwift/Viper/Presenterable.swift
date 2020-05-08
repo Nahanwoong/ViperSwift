@@ -1,14 +1,16 @@
 public protocol Presenterable {
     
-    //    associatedtype V: Viewable
-    //    associatedtype I: Interactorable
-    //    associatedtype R: Routerable
-    //    associatedtype E: PresenterEntities
-    //    var dependencies: (view: V, router: R, interactor: I, entities: E) { get }
+    associatedtype ViewType: Viewable
+    associatedtype InteractorType: Interactorable
+    associatedtype RouterType: Routerable
     
-    associatedtype V: Viewable
-    associatedtype I: Interactorable
-    associatedtype R: Routerable
-    var dependencies: (view:V, interactor: I, router: R) { get }
+    typealias PresenterDependencies = (
+        view: ViewType,
+        interactor: InteractorType,
+        router: RouterType
+    )
+    
+    var dependencies: PresenterDependencies { get set }
+    init(dependencies: PresenterDependencies)
 }
 

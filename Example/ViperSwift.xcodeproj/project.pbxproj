@@ -20,7 +20,6 @@
 		D30F3A342459641A0024EEE1 /* TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F3A302459641A0024EEE1 /* TestRouter.swift */; };
 		D30F3A352459641A0024EEE1 /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F3A312459641A0024EEE1 /* TestInteractor.swift */; };
 		D30F3A362459641A0024EEE1 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F3A322459641A0024EEE1 /* TestPresenter.swift */; };
-		D30F3A372459641A0024EEE1 /* Test+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F3A332459641A0024EEE1 /* Test+Protocols.swift */; };
 		D30F3A3C245965F70024EEE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D30F3A3A245965F70024EEE1 /* Images.xcassets */; };
 		F4403390A4089C8D49BE3CB0 /* Pods_ViperSwift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4E0735F477A29137032FE3 /* Pods_ViperSwift_Example.framework */; };
 /* End PBXBuildFile section */
@@ -48,7 +47,6 @@
 		D30F3A302459641A0024EEE1 /* TestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRouter.swift; sourceTree = "<group>"; };
 		D30F3A312459641A0024EEE1 /* TestInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
 		D30F3A322459641A0024EEE1 /* TestPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
-		D30F3A332459641A0024EEE1 /* Test+Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Test+Protocols.swift"; sourceTree = "<group>"; };
 		D30F3A3A245965F70024EEE1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D30F3A3B245965F70024EEE1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB4E0735F477A29137032FE3 /* Pods_ViperSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,7 +145,6 @@
 		D30F3A15245961450024EEE1 /* Test-Module */ = {
 			isa = PBXGroup;
 			children = (
-				D30F3A332459641A0024EEE1 /* Test+Protocols.swift */,
 				D30F3A2C245964110024EEE1 /* TestViewController.swift */,
 				D30F3A2D245964110024EEE1 /* TestViewController.xib */,
 				D30F3A312459641A0024EEE1 /* TestInteractor.swift */,
@@ -310,7 +307,6 @@
 				D30F3A352459641A0024EEE1 /* TestInteractor.swift in Sources */,
 				D30F3A27245962300024EEE1 /* SplashPresenter.swift in Sources */,
 				D30F3A1F245961F80024EEE1 /* Splash+Protocols.swift in Sources */,
-				D30F3A372459641A0024EEE1 /* Test+Protocols.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				D30F3A25245962290024EEE1 /* SplashInteractor.swift in Sources */,
 			);

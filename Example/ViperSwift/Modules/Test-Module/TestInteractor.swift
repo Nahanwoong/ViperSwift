@@ -5,10 +5,14 @@
 //  Created by MacBook-Na on 2020/04/29.
 //  Copyright © 2020 CocoaPods. All rights reserved.
 //
+import ViperSwift
+
+
+private protocol TestInteractorable: Interactorable {
+    
+}
 
 class TestInteractor: TestInteractorable {
     typealias P = TestPresenter
     var presenter: TestPresenter!
-    
-    
 }

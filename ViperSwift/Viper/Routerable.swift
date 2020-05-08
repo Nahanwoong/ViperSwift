@@ -1,8 +1,10 @@
 import UIKit
 
 public protocol Routerable {
-    associatedtype V: Viewable where V: UIViewController
-    var view: V! { get }
+    
+    associatedtype ViewType: Viewable where ViewType: UIViewController
+    var view: ViewType { get }
+    init(view: ViewType)
     
     func push(_ view: UIViewController, animated: Bool)
     func present(_ view: UIViewController, _ modalPresentationStyle: UIModalPresentationStyle, animated: Bool)
@@ -11,7 +13,6 @@ public protocol Routerable {
     func pop(animated: Bool)
     func dismiss(animated: Bool)
     func dismiss(animated: Bool, _completion:  @escaping (() -> Void))
-    init(view:V)
 }
 
 extension Routerable {

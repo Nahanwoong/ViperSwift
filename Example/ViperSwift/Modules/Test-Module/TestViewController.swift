@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import ViperSwift
+
+private protocol TestViewable : Viewable {
+    
+}
 
 class TestViewController: UIViewController, TestViewable {
 
@@ -14,7 +19,6 @@ class TestViewController: UIViewController, TestViewable {
     var presenter: TestPresenter!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+        super.viewDidLoad()   
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 class SplashRouter: SplashRouterable {
     
     typealias V = SplashViewController
-    private(set) var view: SplashViewController!
+    private(set) var view: SplashViewController
     
     required init(view: SplashViewController) {
         self.view = view
@@ -20,8 +20,7 @@ class SplashRouter: SplashRouterable {
         let view = SplashViewController()
         let interactor = SplashInteractor()
         let router = SplashRouter(view: view)
-        let dependencies = SplashPresenterDependencies(view: view, interactor: interactor, router: router)
-        let presenter: SplashPresenter = SplashPresenter(dependencies: dependencies)
+        let presenter = SplashPresenter(dependencies: (view: view, interactor: interactor, router: router))
 
         view.presenter = presenter
         interactor.presenter = presenter

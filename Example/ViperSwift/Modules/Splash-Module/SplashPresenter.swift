@@ -7,9 +7,11 @@
 //
 
 class SplashPresenter: SplashPresenterable {
+    required init(dependencies: (view: SplashViewController, interactor: SplashInteractor, router: SplashRouter)) {
+        self.dependencies = dependencies
+    }
     
-    private(set) var dependencies: SplashPresenterDependencies
-    init(dependencies: SplashPresenterDependencies) { self.dependencies = dependencies }
+    var dependencies: (view: SplashViewController, interactor: SplashInteractor, router: SplashRouter)
     
     func delayProcess() {
         dependencies.interactor.startDelay(duration: 2)

@@ -9,13 +9,8 @@
 import UIKit
 import ViperSwift
 
-protocol TestViewable : Viewable {
-    
-}
 
-protocol TestInteractorable: Interactorable {
-    
-}
+
 
 protocol TestPresenterable: Presenterable {
     
@@ -27,6 +22,4 @@ typealias TestPresenterDependencies = (
     router: TestRouter
 )
 
-protocol TestRouterable: Routerable {
-    static func assembleModule() -> UIViewController
-}
+

@@ -1,4 +1,4 @@
 public protocol Interactorable {
-    associatedtype P: Presenterable
-    var presenter:P! { get }
+    associatedtype PresenterType: Presenterable
+    var presenter:PresenterType! { get }
 }
