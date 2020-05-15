@@ -10,7 +10,7 @@ public protocol Presenterable {
         router: RouterType
     )
     
-    var dependencies: PresenterDependencies { get set }
+    var dependencies: PresenterDependencies { get }
     init(dependencies: PresenterDependencies)
 }
 
