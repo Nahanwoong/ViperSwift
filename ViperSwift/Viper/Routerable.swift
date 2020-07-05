@@ -7,9 +7,10 @@ public protocol Routerable {
     init(view: ViewType)
     
     func push(_ view: UIViewController, animated: Bool)
-    func present(_ view: UIViewController, _ modalPresentationStyle: UIModalPresentationStyle, animated: Bool)
-    func present(_ view: UIViewController, _ modalPresentationStyle: UIModalPresentationStyle, animated: Bool, _completion: @escaping (() -> Void))
-    
+    func present(_ view: UIViewController, animated: Bool)
+    func present(_ view: UIViewController, animated: Bool, _completion: @escaping (() -> Void))
+    func present(_ view: UIViewController, modalPresentationStyle: UIModalPresentationStyle, animated: Bool)
+    func present(_ view: UIViewController, modalPresentationStyle: UIModalPresentationStyle, animated: Bool, _completion: @escaping (() -> Void))
     func pop(animated: Bool)
     func dismiss(animated: Bool)
     func dismiss(animated: Bool, _completion:  @escaping (() -> Void))
@@ -21,7 +22,7 @@ extension Routerable {
         self.view.navigationController?.pushViewController(view, animated: animated)
     }
     
-    public func present(_ view: UIViewController, _ modalPresentationStyle: UIModalPresentationStyle = .automatic, animated: Bool = true) {
+    public func present(_ view: UIViewController, animated: Bool) {
         if let delegate = self.view as? UIAdaptivePresentationControllerDelegate {
             var viewController:UIViewController = view
             if let navigation = view as? UINavigationController, let vc = navigation.topViewController {
@@ -31,13 +32,12 @@ extension Routerable {
                 presentationController.delegate = delegate
             }
         }
-        view.modalPresentationStyle = modalPresentationStyle
         self.view.present(view, animated: animated, completion: nil)
     }
     
-    public func present(_ view: UIViewController, _ modalPresentationStyle: UIModalPresentationStyle = .automatic, animated: Bool = true, _completion: @escaping (() -> Void)) {
+    public func present(_ view: UIViewController, animated: Bool, _completion: @escaping (() -> Void)) {
         if let delegate = self.view as? UIAdaptivePresentationControllerDelegate {
-            var viewController:UIViewController = view
+            var viewController: UIViewController = view
             if let navigation = view as? UINavigationController, let vc = navigation.topViewController {
                 viewController = vc
             }
@@ -45,8 +45,17 @@ extension Routerable {
                 presentationController.delegate = delegate
             }
         }
-        view.modalPresentationStyle = modalPresentationStyle
         self.view.present(view, animated: animated, completion: _completion)
+    }
+    
+    public func present(_ view: UIViewController, modalPresentationStyle: UIModalPresentationStyle, animated: Bool = true) {
+        view.modalPresentationStyle = modalPresentationStyle
+        present(view, animated: animated)
+    }
+    
+    public func present(_ view: UIViewController, modalPresentationStyle: UIModalPresentationStyle, animated: Bool = true, _completion: @escaping (() -> Void)) {
+        view.modalPresentationStyle = modalPresentationStyle
+        present(view, animated: animated, _completion: _completion)
     }
     
     public func pop(animated: Bool) {
@@ -56,15 +65,19 @@ extension Routerable {
     public func dismiss(animated: Bool) {
         self.view.dismiss(animated: true, completion: {
             if let presentationController = self.view.presentationController, let delegate = presentationController.delegate {
-                delegate.presentationControllerDidDismiss?(presentationController)
+                if #available(iOS 13.0, *) {
+                    delegate.presentationControllerDidDismiss?(presentationController)
+                }
             }
         })
     }
-
+    
     public func dismiss(animated: Bool, _completion: @escaping (() -> Void)) {
         self.view.dismiss(animated: true, completion: {
             if let presentationController = self.view.presentationController, let delegate = presentationController.delegate {
-                delegate.presentationControllerDidDismiss?(presentationController)
+                if #available(iOS 13.0, *) {
+                    delegate.presentationControllerDidDismiss?(presentationController)
+                }
             }
             _completion()
         })

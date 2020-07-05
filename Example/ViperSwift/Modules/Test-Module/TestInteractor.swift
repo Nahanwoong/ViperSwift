@@ -1,18 +1,20 @@
 //
 //  TestInteractor.swift
-//  ViperSwift_Example
+//  ViperSwift
 //
-//  Created by MacBook-Na on 2020/04/29.
-//  Copyright © 2020 CocoaPods. All rights reserved.
+//  Created by MacBook-Na on 2020/07/05.
+//  Copyright (c) 2020 CocoaPods. All rights reserved.
 //
+//
+
+import Foundation
 import ViperSwift
 
-
-private protocol TestInteractorable: Interactorable {
+fileprivate protocol TestInteractorable: Interactorable {
     
 }
 
 class TestInteractor: TestInteractorable {
-    typealias P = TestPresenter
+    typealias PresenterType = TestPresenter
     var presenter: TestPresenter!
 }

@@ -11,18 +11,21 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+ - Swift 4.2
+ - iOS 10.0+  
+
 ## Installation
 
 ViperSwift is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ViperSwift', :tag => '1.0.3', :git => 'https://github.com/Nahanwoong/ViperSwfit'
+pod 'ViperSwift', :tag => '2.0.0', :git => 'https://github.com/Nahanwoong/ViperSwfit'
 ```
 
 ## Author
 
-nibdevn@gmail.com
+[@Nahanwoong](nibdevn@gmail.com)
 
 ## License
 

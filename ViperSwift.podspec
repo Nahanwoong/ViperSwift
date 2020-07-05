@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ViperSwift'
-  s.version          = '1.0.3'
+  s.version          = '2.0.0'
   s.summary          = 'This is ViperSwift'
 
 # This description is used to generate tags and improve search results.
@@ -26,9 +26,9 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/Nahanwoong/ViperSwift.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '10.0'
   s.source_files = 'ViperSwift/Viper/**/*.swift'
-  s.ios.dependency 'SVProgressHUD'
+  s.swift_version = '4.2'
   
   # s.resource_bundles = {
   #   'ViperSwift' => ['ViperSwift/Assets/*.png']

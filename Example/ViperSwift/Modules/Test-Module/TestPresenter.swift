@@ -1,25 +1,27 @@
 //
 //  TestPresenter.swift
-//  ViperSwift_Example
+//  ViperSwift
 //
-//  Created by MacBook-Na on 2020/04/29.
-//  Copyright © 2020 CocoaPods. All rights reserved.
+//  Created by MacBook-Na on 2020/07/05.
+//  Copyright (c) 2020 CocoaPods. All rights reserved.
 //
+//
+import Foundation
 import ViperSwift
 
-private protocol TestPresenterable: Presenterable {
+fileprivate protocol TestPresenterable: Presenterable {
     
 }
 
 class TestPresenter: TestPresenterable {
-    required init(dependencies: (view: TestViewController, interactor: TestInteractor, router: TestRouter)) {
+    
+    typealias ViewType       = TestViewController
+    typealias InteractorType = TestInteractor
+    typealias RouterType     = TestRouter
+    
+    private(set) var dependencies: PresenterDependencies
+    
+    required init(dependencies: PresenterDependencies) {
         self.dependencies = dependencies
     }
-    
-    var dependencies: (view: TestViewController, interactor: TestInteractor, router: TestRouter)
-    
-    typealias V = TestViewController
-    typealias I = TestInteractor
-    typealias R = TestRouter
 }
-

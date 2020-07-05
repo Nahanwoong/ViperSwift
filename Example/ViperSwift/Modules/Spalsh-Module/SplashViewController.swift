@@ -1,5 +1,5 @@
 //
-//  TestViewController.swift
+//  SplashViewController.swift
 //  ViperSwift
 //
 //  Created by MacBook-Na on 2020/07/05.
@@ -9,16 +9,17 @@
 import UIKit
 import ViperSwift
 
-fileprivate protocol TestViewable: Viewable {
+fileprivate protocol SplashViewable: Viewable {
     
 }
 
-class TestViewController: UIViewController, TestViewable {
+class SplashViewController: UIViewController, SplashViewable {
     
-    typealias PresenterType = TestPresenter
+    typealias PresenterType = SplashPresenter
     var presenter: PresenterType!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.delayProcess()
     }
 }

@@ -8,18 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
+		D309961524B2182A00B68B4D /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309961024B2182A00B68B4D /* SplashPresenter.swift */; };
+		D309961624B2182A00B68B4D /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309961124B2182A00B68B4D /* SplashRouter.swift */; };
+		D309961724B2182A00B68B4D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309961224B2182A00B68B4D /* SplashViewController.swift */; };
+		D309961824B2182A00B68B4D /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309961324B2182A00B68B4D /* SplashInteractor.swift */; };
+		D309961924B2182A00B68B4D /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D309961424B2182A00B68B4D /* SplashViewController.xib */; };
+		D309961F24B2199300B68B4D /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309961A24B2199300B68B4D /* TestPresenter.swift */; };
+		D309962024B2199300B68B4D /* TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309961B24B2199300B68B4D /* TestRouter.swift */; };
+		D309962124B2199300B68B4D /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309961C24B2199300B68B4D /* TestViewController.swift */; };
+		D309962224B2199300B68B4D /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D309961D24B2199300B68B4D /* TestInteractor.swift */; };
+		D309962324B2199300B68B4D /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D309961E24B2199300B68B4D /* TestViewController.xib */; };
 		D30F3A132459612F0024EEE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30F3A102459612F0024EEE1 /* Main.storyboard */; };
-		D30F3A1F245961F80024EEE1 /* Splash+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F3A1E245961F80024EEE1 /* Splash+Protocols.swift */; };
-		D30F3A222459620F0024EEE1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F3A202459620F0024EEE1 /* SplashViewController.swift */; };
-		D30F3A232459620F0024EEE1 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30F3A212459620F0024EEE1 /* SplashViewController.xib */; };
-		D30F3A25245962290024EEE1 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F3A24245962290024EEE1 /* SplashInteractor.swift */; };
-		D30F3A27245962300024EEE1 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F3A26245962300024EEE1 /* SplashPresenter.swift */; };
-		D30F3A29245962380024EEE1 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F3A28245962380024EEE1 /* SplashRouter.swift */; };
-		D30F3A2E245964110024EEE1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F3A2C245964110024EEE1 /* TestViewController.swift */; };
-		D30F3A2F245964110024EEE1 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30F3A2D245964110024EEE1 /* TestViewController.xib */; };
-		D30F3A342459641A0024EEE1 /* TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F3A302459641A0024EEE1 /* TestRouter.swift */; };
-		D30F3A352459641A0024EEE1 /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F3A312459641A0024EEE1 /* TestInteractor.swift */; };
-		D30F3A362459641A0024EEE1 /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F3A322459641A0024EEE1 /* TestPresenter.swift */; };
 		D30F3A3C245965F70024EEE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D30F3A3A245965F70024EEE1 /* Images.xcassets */; };
 		F4403390A4089C8D49BE3CB0 /* Pods_ViperSwift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4E0735F477A29137032FE3 /* Pods_ViperSwift_Example.framework */; };
 /* End PBXBuildFile section */
@@ -35,18 +34,17 @@
 		9E2BF10734A4362C9A6517E2 /* Pods-ViperSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperSwift_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ViperSwift_Tests/Pods-ViperSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A61DE0D2FAD00967C5430FBD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		ABCB1E9EEE1F9C995359A975 /* ViperSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ViperSwift.podspec; path = ../ViperSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D309961024B2182A00B68B4D /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		D309961124B2182A00B68B4D /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		D309961224B2182A00B68B4D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		D309961324B2182A00B68B4D /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		D309961424B2182A00B68B4D /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		D309961A24B2199300B68B4D /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
+		D309961B24B2199300B68B4D /* TestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRouter.swift; sourceTree = "<group>"; };
+		D309961C24B2199300B68B4D /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		D309961D24B2199300B68B4D /* TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
+		D309961E24B2199300B68B4D /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		D30F3A112459612F0024EEE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D30F3A1E245961F80024EEE1 /* Splash+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Splash+Protocols.swift"; sourceTree = "<group>"; };
-		D30F3A202459620F0024EEE1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		D30F3A212459620F0024EEE1 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
-		D30F3A24245962290024EEE1 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
-		D30F3A26245962300024EEE1 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
-		D30F3A28245962380024EEE1 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
-		D30F3A2C245964110024EEE1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		D30F3A2D245964110024EEE1 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
-		D30F3A302459641A0024EEE1 /* TestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRouter.swift; sourceTree = "<group>"; };
-		D30F3A312459641A0024EEE1 /* TestInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
-		D30F3A322459641A0024EEE1 /* TestPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
 		D30F3A3A245965F70024EEE1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D30F3A3B245965F70024EEE1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB4E0735F477A29137032FE3 /* Pods_ViperSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +123,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D309960F24B2181C00B68B4D /* Spalsh-Module */ = {
+			isa = PBXGroup;
+			children = (
+				D309961324B2182A00B68B4D /* SplashInteractor.swift */,
+				D309961024B2182A00B68B4D /* SplashPresenter.swift */,
+				D309961124B2182A00B68B4D /* SplashRouter.swift */,
+				D309961224B2182A00B68B4D /* SplashViewController.swift */,
+				D309961424B2182A00B68B4D /* SplashViewController.xib */,
+			);
+			path = "Spalsh-Module";
+			sourceTree = "<group>";
+		};
 		D30F3A0D2459612F0024EEE1 /* App-UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +146,7 @@
 		D30F3A14245961450024EEE1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				D30F3A16245961450024EEE1 /* Splash-Module */,
+				D309960F24B2181C00B68B4D /* Spalsh-Module */,
 				D30F3A15245961450024EEE1 /* Test-Module */,
 			);
 			path = Modules;
@@ -145,26 +155,13 @@
 		D30F3A15245961450024EEE1 /* Test-Module */ = {
 			isa = PBXGroup;
 			children = (
-				D30F3A2C245964110024EEE1 /* TestViewController.swift */,
-				D30F3A2D245964110024EEE1 /* TestViewController.xib */,
-				D30F3A312459641A0024EEE1 /* TestInteractor.swift */,
-				D30F3A322459641A0024EEE1 /* TestPresenter.swift */,
-				D30F3A302459641A0024EEE1 /* TestRouter.swift */,
+				D309961A24B2199300B68B4D /* TestPresenter.swift */,
+				D309961B24B2199300B68B4D /* TestRouter.swift */,
+				D309961C24B2199300B68B4D /* TestViewController.swift */,
+				D309961D24B2199300B68B4D /* TestInteractor.swift */,
+				D309961E24B2199300B68B4D /* TestViewController.xib */,
 			);
 			path = "Test-Module";
-			sourceTree = "<group>";
-		};
-		D30F3A16245961450024EEE1 /* Splash-Module */ = {
-			isa = PBXGroup;
-			children = (
-				D30F3A1E245961F80024EEE1 /* Splash+Protocols.swift */,
-				D30F3A202459620F0024EEE1 /* SplashViewController.swift */,
-				D30F3A212459620F0024EEE1 /* SplashViewController.xib */,
-				D30F3A24245962290024EEE1 /* SplashInteractor.swift */,
-				D30F3A26245962300024EEE1 /* SplashPresenter.swift */,
-				D30F3A28245962380024EEE1 /* SplashRouter.swift */,
-			);
-			path = "Splash-Module";
 			sourceTree = "<group>";
 		};
 		D30F3A39245965F70024EEE1 /* Resources */ = {
@@ -241,9 +238,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D30F3A3C245965F70024EEE1 /* Images.xcassets in Resources */,
-				D30F3A2F245964110024EEE1 /* TestViewController.xib in Resources */,
 				D30F3A132459612F0024EEE1 /* Main.storyboard in Resources */,
-				D30F3A232459620F0024EEE1 /* SplashViewController.xib in Resources */,
+				D309962324B2199300B68B4D /* TestViewController.xib in Resources */,
+				D309961924B2182A00B68B4D /* SplashViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,16 +296,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D30F3A2E245964110024EEE1 /* TestViewController.swift in Sources */,
-				D30F3A362459641A0024EEE1 /* TestPresenter.swift in Sources */,
-				D30F3A342459641A0024EEE1 /* TestRouter.swift in Sources */,
-				D30F3A222459620F0024EEE1 /* SplashViewController.swift in Sources */,
-				D30F3A29245962380024EEE1 /* SplashRouter.swift in Sources */,
-				D30F3A352459641A0024EEE1 /* TestInteractor.swift in Sources */,
-				D30F3A27245962300024EEE1 /* SplashPresenter.swift in Sources */,
-				D30F3A1F245961F80024EEE1 /* Splash+Protocols.swift in Sources */,
+				D309961824B2182A00B68B4D /* SplashInteractor.swift in Sources */,
+				D309961624B2182A00B68B4D /* SplashRouter.swift in Sources */,
+				D309962124B2199300B68B4D /* TestViewController.swift in Sources */,
+				D309961F24B2199300B68B4D /* TestPresenter.swift in Sources */,
+				D309961524B2182A00B68B4D /* SplashPresenter.swift in Sources */,
+				D309962024B2199300B68B4D /* TestRouter.swift in Sources */,
+				D309961724B2182A00B68B4D /* SplashViewController.swift in Sources */,
+				D309962224B2199300B68B4D /* TestInteractor.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				D30F3A25245962290024EEE1 /* SplashInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +430,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 72TWPKN9X4;
 				INFOPLIST_FILE = ViperSwift/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
 				MODULE_NAME = ExampleApp;
@@ -455,7 +451,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 72TWPKN9X4;
 				INFOPLIST_FILE = ViperSwift/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
 				MODULE_NAME = ExampleApp;
