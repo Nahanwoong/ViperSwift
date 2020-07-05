@@ -1,5 +1,4 @@
 import UIKit
-import SVProgressHUD
 
 public protocol Viewable {
     
