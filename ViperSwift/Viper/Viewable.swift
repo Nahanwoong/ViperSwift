@@ -1,9 +1,9 @@
 import UIKit
 
-public protocol Viewable {
+public protocol Viewable: class {
     
     associatedtype PresenterType: Presenterable
-    var presenter: PresenterType! { get }
+    var presenter: PresenterType? { get }
     func setTitle(title: String)
 }
 

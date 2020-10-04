@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func startSplash() {
-        let module = SplashRouter.assembleModule()
+        let module = SplashRouter.loadViewModule()
         window?.rootViewController = module
         window?.makeKeyAndVisible()
     }

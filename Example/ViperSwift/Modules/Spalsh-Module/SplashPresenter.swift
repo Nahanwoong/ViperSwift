@@ -2,7 +2,7 @@
 //  SplashPresenter.swift
 //  ViperSwift
 //
-//  Created by MacBook-Na on 2020/07/05.
+//  Created by MacBook-Na on 2020/10/04.
 //  Copyright (c) 2020 CocoaPods. All rights reserved.
 //
 //
@@ -10,8 +10,7 @@ import Foundation
 import ViperSwift
 
 fileprivate protocol SplashPresenterable: Presenterable {
-    func delayProcess()
-    func presentToTest()
+    
 }
 
 class SplashPresenter: SplashPresenterable {
@@ -19,6 +18,7 @@ class SplashPresenter: SplashPresenterable {
     typealias ViewType       = SplashViewController
     typealias InteractorType = SplashInteractor
     typealias RouterType     = SplashRouter
+    typealias EntityType     = Void
     
     private(set) var dependencies: PresenterDependencies
     
@@ -26,18 +26,13 @@ class SplashPresenter: SplashPresenterable {
         self.dependencies = dependencies
     }
     
-    func delayProcess() {
-        dependencies.interactor.startDelay(duration: 2)
+    func viewDidLoad() {
+        dependencies.interactor.delay()
     }
     
-    func presentToTest() {
-        let module = TestRouter.assembleModule()
-        dependencies.router.present(module, animated: true)
-    }
-}
-
-extension SplashPresenter: SplashInteractorableCallbackable {
-    func delayedTime() {
-        presentToTest()
+    func presentToUser() {
+        let user = User(name: "Nahanwoong", age: 28, email: "nibdevn@gmail.com")
+        let view = UserRouter.loadViewModule(user: user)
+        dependencies.router.present(view, modalPresentationStyle: .fullScreen)
     }
 }

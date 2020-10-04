@@ -1,6 +1,6 @@
 import UIKit
 
-public protocol Routerable {
+public protocol Routerable: class {
     
     associatedtype ViewType: Viewable where ViewType: UIViewController
     var view: ViewType { get }
@@ -8,12 +8,12 @@ public protocol Routerable {
     
     func push(_ view: UIViewController, animated: Bool)
     func present(_ view: UIViewController, animated: Bool)
-    func present(_ view: UIViewController, animated: Bool, _completion: @escaping (() -> Void))
+    func present(_ view: UIViewController, animated: Bool, completion: @escaping (() -> Void))
     func present(_ view: UIViewController, modalPresentationStyle: UIModalPresentationStyle, animated: Bool)
-    func present(_ view: UIViewController, modalPresentationStyle: UIModalPresentationStyle, animated: Bool, _completion: @escaping (() -> Void))
+    func present(_ view: UIViewController, modalPresentationStyle: UIModalPresentationStyle, animated: Bool, completion: @escaping (() -> Void))
     func pop(animated: Bool)
     func dismiss(animated: Bool)
-    func dismiss(animated: Bool, _completion:  @escaping (() -> Void))
+    func dismiss(animated: Bool, completion:  @escaping (() -> Void))
 }
 
 extension Routerable {
@@ -35,7 +35,7 @@ extension Routerable {
         self.view.present(view, animated: animated, completion: nil)
     }
     
-    public func present(_ view: UIViewController, animated: Bool, _completion: @escaping (() -> Void)) {
+    public func present(_ view: UIViewController, animated: Bool, completion: @escaping (() -> Void)) {
         if let delegate = self.view as? UIAdaptivePresentationControllerDelegate {
             var viewController: UIViewController = view
             if let navigation = view as? UINavigationController, let vc = navigation.topViewController {
@@ -45,7 +45,7 @@ extension Routerable {
                 presentationController.delegate = delegate
             }
         }
-        self.view.present(view, animated: animated, completion: _completion)
+        self.view.present(view, animated: animated, completion: completion)
     }
     
     public func present(_ view: UIViewController, modalPresentationStyle: UIModalPresentationStyle, animated: Bool = true) {
@@ -53,9 +53,9 @@ extension Routerable {
         present(view, animated: animated)
     }
     
-    public func present(_ view: UIViewController, modalPresentationStyle: UIModalPresentationStyle, animated: Bool = true, _completion: @escaping (() -> Void)) {
+    public func present(_ view: UIViewController, modalPresentationStyle: UIModalPresentationStyle, animated: Bool = true, completion: @escaping (() -> Void)) {
         view.modalPresentationStyle = modalPresentationStyle
-        present(view, animated: animated, _completion: _completion)
+        present(view, animated: animated, completion: completion)
     }
     
     public func pop(animated: Bool) {
@@ -72,14 +72,14 @@ extension Routerable {
         })
     }
     
-    public func dismiss(animated: Bool, _completion: @escaping (() -> Void)) {
+    public func dismiss(animated: Bool, completion: @escaping (() -> Void)) {
         self.view.dismiss(animated: true, completion: {
             if let presentationController = self.view.presentationController, let delegate = presentationController.delegate {
                 if #available(iOS 13.0, *) {
                     delegate.presentationControllerDidDismiss?(presentationController)
                 }
             }
-            _completion()
+            completion()
         })
     }
 }
